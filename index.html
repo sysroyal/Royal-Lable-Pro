@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>رویال لیبل - چاپ لیبل پستی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <style>
+      body {
+        font-family: 'Vazirmatn', sans-serif;
+      }
+      @media print {
+        body {
+          background-color: white !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+        .no-print {
+          display: none !important;
+        }
+        .print-only {
+          display: block !important;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        
+        /* Reset any backgrounds that are not labels */
+        .bg-gray-50, .bg-gray-100 {
+          background-color: white !important;
+        }
+
+        /* Standard page break container */
+        .page-container {
+          page-break-after: always;
+          position: relative;
+          overflow: hidden;
+          background: white !important;
+        }
+
+        .page-container:last-child {
+          page-break-after: auto;
+        }
+
+        /* Ensure background colors print */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "xlsx": "https://esm.sh/xlsx@0.18.5"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-BQkbrstJ.js"></script>
+</head>
+  <body class="bg-gray-50 text-gray-800">
+    <div id="root"></div>
+</body>
+</html>
